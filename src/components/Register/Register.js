@@ -11,7 +11,7 @@ class Register extends React.Component {
   }
 
   componentDidMount(){
-    fetch('https://cryptic-cliffs-40445.herokuapp.com/users').then((response)=>{
+    fetch('https://localhost:3001/users').then((response)=>{
         return response.json()
     }).then((data)=>{
         console.log(data)
@@ -31,7 +31,7 @@ class Register extends React.Component {
   }
 
   onSubmitSignIn = () => {
-    fetch('https://secret-earth-50380.herokuapp.com/register', {
+    fetch('https://localhost:3001/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
